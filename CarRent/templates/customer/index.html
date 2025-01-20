@@ -1,0 +1,144 @@
+{% extends 'layout.html' %}
+{% block title %}
+Provider
+{% endblock  %}
+
+{% block content %}
+<div class="container-fluid py-3 px-4" id="dash-cf">
+    <div class="row">
+        <div class="col-2 py-2" id="left-side">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active text-left" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile" type="button"><i class="fa-solid fa-user pr-3"></i>Profile</button>
+                <button class="nav-link text-left" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages" type="button"><i class="fa-solid fa-user-plus pr-3"></i>Car List</button>
+                <button class="nav-link text-left" id="v-pills-users-tab" data-toggle="pill" data-target="#v-pills-meeting" type="button"><i class="fa-solid fa-handshake pr-3"></i>Your Booking</button>
+                <button class="nav-link text-left" id="v-pills-users-tab" data-toggle="pill" data-target="#v-pills-assignment" type="button"><i class="fa-solid fa-file pr-3"></i>Report</button>
+            </div>
+        </div>
+        <div class="col-9 mx-3 py-3 px-4" id="right-side">
+            <div class="tab-content " id="v-pills-tabContent">
+                <!-- profile -->
+                <div class="tab-pane fade profile show active   " id="v-pills-profile" role="tabpanel">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1>Profile</h1>
+                        </div>
+                        <div class="col-6">
+                            <h6 class="text-success mt-3 text-right">Active <i class="fa-solid fa-circle"></i></h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="" alt="profile pic">
+                            </div>
+                            <div class="col-9">
+                                <p><b>Full Name:</b>Test name</p>
+                                <p><b>Mobile:</b>+91-7896541230</p>
+                                <p><b>Email:</b>test@dsf.cs</p>
+                                <p><b>Address:</b>This is my address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end profile -->
+
+                 <!-- car list -->
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel">
+                    <h1>Car list</h1>
+                    <hr>
+                    <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">s.no</th>
+                            <th scope="col">Car Name</th>
+                            <th scope="col">Car Number</th>
+                            <th scope="col">Picture</th>
+                            <th scope="col">Update</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Harrier</td>
+                            <td>MP 51 ME 7896</td>
+                            <td>
+                                <img src="" alt="Car Img">
+                            </td>
+                            <td>
+                                <button class="btn btn-success">Visit</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger">Booking</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <!-- end end car list -->
+
+                <!-- start car booking -->
+                <div class="tab-pane fade" id="v-pills-meeting" role="tabpanel">
+                    <h1>Your Booking</h1>
+                    <hr>
+                    <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">s.no</th>
+                            <th scope="col">Car Name</th>
+                            <th scope="col">Car Number</th>
+                            <th scope="col">Picture</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Harrier</td>
+                            <td>MP 51 ME 7896</td>
+                            <td>
+                                <img src="" alt="Car Img">
+                            </td>
+                            <td>
+                                <button class="btn btn-success">Booked</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <!-- end car booking-->
+
+                <!-- start report-->
+                <div class="tab-pane fade" id="v-pills-assignment" role="tabpanel">
+                    <h1>Report</h1>
+                    <hr>   
+                    <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">s.no</th>
+                            <th scope="col">Car Name</th>
+                            <th scope="col">Car Number</th>
+                            <th scope="col">Report</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Harrier</td>
+                            <td>MP 51 ME 7896</td>
+                            <td>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab at optio cumque repellat qui ipsam maiores harum hic soluta. Cupiditate?</p>
+                            </td>
+                            <td>
+                                <button class="btn btn-success">Solved</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>              
+                </div>
+                <!-- end report-->
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}

@@ -1,0 +1,173 @@
+{% extends 'layout.html' %}
+{% block title %}
+Provider
+{% endblock  %}
+
+{% block content %}
+<div class="container-fluid py-3 px-4" id="dash-cf">
+    <div class="row">
+        <div class="col-2 py-2" id="left-side">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active text-left" id="v-pills-profile-tab" data-toggle="pill" data-target="#v-pills-profile" type="button"><i class="fa-solid fa-user pr-3"></i>Profile</button>
+                <button class="nav-link text-left" id="v-pills-messages-tab" data-toggle="pill" data-target="#v-pills-messages" type="button"><i class="fa-solid fa-user-plus pr-3"></i>Add Cars</button>
+                <button class="nav-link text-left" id="v-pills-users-tab" data-toggle="pill" data-target="#v-pills-meeting" type="button"><i class="fa-solid fa-handshake pr-3"></i>Car List</button>
+                <button class="nav-link text-left" id="v-pills-users-tab" data-toggle="pill" data-target="#v-pills-assignment" type="button"><i class="fa-solid fa-file pr-3"></i>Car status</button>
+                <button class="nav-link text-left" id="v-pills-users-tab" data-toggle="pill" data-target="#v-pills-bug" type="button"><i class="fa-solid fa-bug pr-3"></i>Reports</button>
+            </div>
+        </div>
+        <div class="col-9 mx-3 py-3 px-4" id="right-side">
+            <div class="tab-content " id="v-pills-tabContent">
+                <!-- profile -->
+                <div class="tab-pane fade profile show active   " id="v-pills-profile" role="tabpanel">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1>Profile</h1>
+                        </div>
+                        <div class="col-6">
+                            <h6 class="text-success mt-3 text-right">Active <i class="fa-solid fa-circle"></i></h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="" alt="profile pic">
+                            </div>
+                            <div class="col-9">
+                                <p><b>Full Name:</b>Test name</p>
+                                <p><b>Mobile:</b>+91-7896541230</p>
+                                <p><b>Email:</b>test@dsf.cs</p>
+                                <p><b>Address:</b>This is my address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end profile -->
+
+                 <!-- add user -->
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel">
+                    <h1>Add Cars</h1>
+                    <hr>
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="">Car Name</label>
+                              <input type="text" class="form-control" placeholder="fullname" name="Car Name">
+                            </div>
+                            <div class="col">
+                                <label for="">Car Number</label>
+                              <input type="text" class="form-control" placeholder="Email" name="Car Number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Car Pic</label>
+                            <input type="file" class="form-control" id="exampleInputPassword1" name="file">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Address</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="address">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+
+                </div>
+                <!-- end add user -->
+
+                <!-- start meeting -->
+                <div class="tab-pane fade" id="v-pills-meeting" role="tabpanel">
+                    <h1>Car List</h1>
+                    <hr>  
+                    <table class="table">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col">s.no</th>
+                          <th scope="col">Car Name</th>
+                          <th scope="col">Car Number</th>
+                          <th scope="col">Picture</th>
+                          <th scope="col">Update</th>
+                          <th scope="col">Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Harrier</td>
+                          <td>MP 51 ME 7896</td>
+                          <td>
+                              <img src="" alt="Car Img">
+                          </td>
+                          <td>
+                              <button class="btn btn-success">Update</button>
+                          </td>
+                          <td>
+                              <button class="btn btn-danger">Delete</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <!-- end meeting -->
+
+                <!-- start assignment -->
+                <div class="tab-pane fade" id="v-pills-assignment" role="tabpanel">
+                    <h1>Car Status</h1>
+                    <hr>   
+                    <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">s.no</th>
+                            <th scope="col">Car Name</th>
+                            <th scope="col">Car Number</th>
+                            <th scope="col">Picture</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Harrier</td>
+                            <td>MP 51 ME 7896</td>
+                            <td>
+                                <img src="" alt="Car Img">
+                            </td>
+                            <td>
+                                <button class="btn btn-success">Booked</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>             
+                </div>
+                <!-- end assignment -->
+
+               <!-- bug -->
+                <div class="tab-pane fade" id="v-pills-bug" role="tabpanel">
+                    <h1>Report</h1>
+                    <hr> 
+                    <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">s.no</th>
+                            <th scope="col">Car Name</th>
+                            <th scope="col">Car Number</th>
+                            <th scope="col">Report</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Harrier</td>
+                            <td>MP 51 ME 7896</td>
+                            <td>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab at optio cumque repellat qui ipsam maiores harum hic soluta. Cupiditate?</p>
+                            </td>
+                            <td>
+                                <button class="btn btn-success">Solved</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table> 
+                </div>
+                <!-- end bug -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}
