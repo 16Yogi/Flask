@@ -1,6 +1,7 @@
 import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
+# from flask_sqlalchemy import SQLAlchemy
 from flask_sqlalchemy import SQLAlchemy
 
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'media')
@@ -39,7 +40,7 @@ def provider_home():
     return render_template('provider/index.html')
 
 
-@app.route("/provider_reg/", methods=['GET', 'POST'])
+@app.route("/provider_reg/", methods=['POST', 'GET'])
 def provider_reg():
     if request.method == 'POST':
         fullname = request.form.get('fullname')
@@ -82,7 +83,7 @@ def provider_reg():
         )
         # print(pro_reg)
         # print("ok")
-        db.session.add(pro_reg)
+        db.session.add(pro_reg) 
         db.session.commit()
         print("Registration successful")
         # flash("Registration successful!", "success")
